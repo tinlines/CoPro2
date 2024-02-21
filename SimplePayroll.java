@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//mali 'to
 public class SimplePayroll {
    //blic 
    private static String name;
