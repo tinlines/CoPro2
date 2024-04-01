@@ -10,16 +10,15 @@ public class LabExer22 {
 	public void setTotalCost(int quantity, double price) {
 		itemQuantity = quantity;
 		itemPrice = price;
-		amountDue = quantity * price;
 	}
 	public String getItemName() {
 		return itemName;
 	}
-	public double getTotalCost() {
+	public static double getTotalCost() {
 		amountDue = itemQuantity * itemPrice;
 		return amountDue;
 	}
-	public void readInput() {
+	public static void readInput() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter the name of the item you are purchasing.");
 		itemName = s.nextLine();
@@ -27,13 +26,13 @@ public class LabExer22 {
 		itemQuantity = s.nextInt();
 		itemPrice = s.nextDouble();
 	}
-	public void writeOutput() {
+	public static void writeOutput() {
 		System.out.println("You are purchasing " + itemQuantity + " " + itemName + "(s) at " + itemPrice + " each.");
 	}
 	public static void main(String[] args) {
-		LabExer2 s = new LabExer2();
-		s.readInput();
-		s.writeOutput();
-		System.out.printf("Amount due is %.2f", s.getTotalCost());
+		//LabExer2 s = new LabExer2();
+		readInput();
+		writeOutput();
+		System.out.printf("Amount due is %.2f", getTotalCost());
 	}
 }
